@@ -1,11 +1,19 @@
 {
     "name" : "계급사회",
-    "start_url" : "/",
-    "id" : "ggsh",
+    "short_name": "계급사회",
+    "start_url" : "./index.html",
     "display" : "standalone",
-    "icons" : [{
-        "src" : "./res/icons/icon.png",
-        "type" : "image/png",
-        "sizes" : "512x512"
-    }]
+    "orientation": "portrait",
+    "icons" : [
+        {
+            "src" : "./res/icons/icon.png",
+            "type" : "image/png",
+            "sizes" : "512x512"
+        },
+        {
+            "src": "./res/icons/favicon.ico",
+            "sizes": "16x16",
+            "type": "image/x-icon"
+        }
+    ]
 }
