@@ -1,0 +1,37 @@
+
+/* 웹 페이지 주요 색상 정의 */
+:root {
+    /* 다크 모드 색상 */
+    --dark-background: #1e1e1e;
+    --dark-color: #ffffff;
+
+    /* 라이트 모드 색상 */
+    --light-background: #fbfbfb;
+    --light-color: #1e1e1e;
+
+    /* 하이라이트 색상 */
+    --highlight-color: #466dfa;
+    --highlight-hover-color: #4366e4;
+}
+
+
+/* 웹 페이지 기본 속성 정의 */
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+/* 라이트 모드 시 웹 속성 */
+@media (prefers-color-scheme: light) {
+    html, body {
+        background: var(--light-background);
+    }
+}
+
+
+/* 다크 모드 시 웹 속성 */
+@media (prefers-color-scheme: dark) {
+    html, body {
+        background: var(--dark-background);
+    }
+}

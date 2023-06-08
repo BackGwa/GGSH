@@ -1,0 +1,11 @@
+{
+    "name" : "계급사회",
+    "start_url" : "/",
+    "id" : "ggsh",
+    "display" : "standalone",
+    "icons" : [{
+        "src" : "/res/icon/icon.png",
+        "type" : "image/png",
+        "sizes" : "512x512"
+    }]
+}
