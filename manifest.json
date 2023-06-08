@@ -4,7 +4,7 @@
     "id" : "ggsh",
     "display" : "standalone",
     "icons" : [{
-        "src" : "/res/icons/icon.png",
+        "src" : "./res/icons/icon.png",
         "type" : "image/png",
         "sizes" : "512x512"
     }]
