@@ -1,0 +1,90 @@
+/* 라이트 모드 시 웹 속성 */
+@media (prefers-color-scheme: light) {
+    .dock {
+        background: var(--light-background);
+        filter: drop-shadow(0px 0px 18px var(--light-shadow));
+
+        border: 1px solid var(--light-border);
+    }
+
+    .item-icon {
+        background-color: var(--light-active);
+    }
+
+    .item-name {
+        color: var(--light-color);
+    }
+
+    .unactive {
+        background-color: var(--light-unactive);
+    }
+}
+
+
+/* 다크 모드 시 웹 속성 */
+@media (prefers-color-scheme: dark) {
+    .dock {
+        background: var(--dark-background);
+        filter: drop-shadow(0px 0px 18px var(--dark-shadow));
+
+        border: 1px solid var(--dark-border);
+    }
+
+    .item-icon {
+        background-color: var(--dark-active);
+    }
+
+    .item-name {
+        color: var(--dark-color);
+    }
+
+    .unactive {
+        background-color: var(--dark-unactive);
+    }
+}
+
+/* 하단 독 속성 */
+footer {
+    position: absolute;
+    width: 100%;
+    height: 90px;
+    bottom: 0;
+    
+    z-index: 10;
+}
+
+.dock {
+    width: 100%;
+    height: 100%;
+
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.dock-list {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: space-around;
+}
+
+.dock-item {
+    width: 100%;
+    height: 100%;
+
+    display: grid;
+}
+
+.item-icon {
+    width: 36px;
+    height: 36px;
+
+    border-radius: 25%;
+    margin: auto;
+}
+
+.item-name {
+    font-size: 13px;
+    text-align: center;
+}
