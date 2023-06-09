@@ -8,7 +8,7 @@
     }
 
     .item-icon {
-        background-color: var(--light-active);
+        fill: var(--light-active);
     }
 
     .item-name {
@@ -16,7 +16,8 @@
     }
 
     .unactive {
-        background-color: var(--light-unactive);
+        fill: var(--light-unactive);
+        color: var(--light-unactive);
     }
 }
 
@@ -31,7 +32,7 @@
     }
 
     .item-icon {
-        background-color: var(--dark-active);
+        fill: var(--dark-active);
     }
 
     .item-name {
@@ -39,7 +40,8 @@
     }
 
     .unactive {
-        background-color: var(--dark-unactive);
+        fill: var(--dark-unactive);
+        color: var(--dark-unactive);
     }
 }
 
@@ -77,11 +79,12 @@ footer {
 }
 
 .item-icon {
-    width: 36px;
-    height: 36px;
+    width: 28px;
+    height: 28px;
 
     border-radius: 25%;
     margin: auto;
+    padding-top: 12px;
 }
 
 .item-name {
