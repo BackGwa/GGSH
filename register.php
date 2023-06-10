@@ -6,12 +6,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>계급사회</title>
 
-        <!-- 웹 어플리케이션 등록 -->
-        <link rel="manifest" href="./manifest.json">
-        <link rel="shortcut icon" href="./res/icons/favicon.ico" type="image/x-icon">
-        <meta name="apple-mobile-web-app-capable" content="yes">
-        <link rel="apple-touch-icon" href="./res/icons/icon.png">
-
         <!-- CSS 적용 -->
         <link rel="stylesheet" href="./style/base.css">
         <link rel="stylesheet" href="./style/container.css">
@@ -33,12 +27,13 @@
             <!-- 콘텐츠 컨테이너 -->
             <div class="content">
                 <!-- 점수 등록 폼 -->
-                <form action="PROCESS.php" method="post" class="form-box">
+                <form name="register" action="./PROCESS.php" method="post" class="form-box"
+                        onsubmit="return check_submit();">
                     <div class="grid-container">
                         <!-- 학번/이름 선택 --> 
                         <div class="container-text">학번 / 이름</div>
                         <select name="select_uid">
-                            <option>> 자신을 선택해주세요. <</option>
+                            <option value="">> 자신을 선택해주세요. <</option>
                             <?php
                                 $DB = mysqli_connect("localhost", "root", "");
                                 mysqli_select_db($DB, "rank");
@@ -57,7 +52,7 @@
                         <!-- 게임 종류 선택 -->
                         <div class="container-text">보드게임</div>
                         <select name="score" id="games" onchange="change_type();">
-                            <option>> 즐긴 게임을 선택해주세요. <</option>
+                            <option value="">> 즐긴 게임을 선택해주세요. <</option>
                             <option value="chomk">체스 / 오목</option>
                             <option value="hali">할리갈리</option>
                             <option value="bang">뱅</option>
@@ -71,14 +66,14 @@
                         <!-- 점수 선택 -->
                         <div class="container-text">점수</div>
                         <select name="rank" id="ranks">
-                            <option value="0">> 순위나 승패여부를 선택해주세요. <</option>
+                            <option value="">> 순위나 승패여부를 선택해주세요. <</option>
                         </select>
 
                         <!-- 기타 옵션 선택 -->
                         <div class="HIDDEN" id="other_option">
                             <div class="container-text">옵션</div>
                             <select name="other" id="other">
-                                <option value="0">> 시작 계급을 선택해주세요. <</option>
+                                <option value="">> 시작 계급을 선택해주세요. <</option>
                             </select>
                         </div>
 
