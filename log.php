@@ -9,6 +9,7 @@
         <!-- CSS 적용 -->
         <link rel="stylesheet" href="./style/base.css">
         <link rel="stylesheet" href="./style/container.css">
+        <link rel="stylesheet" href="./style/rank.css">
 
         <!-- 폰트페이스 -->
         <link href="https://cdn.jsdelivr.net/gh/sunn-us/SUITE/fonts/variable/woff2/SUITE-Variable.css" rel="stylesheet"> 
@@ -21,9 +22,33 @@
             <!-- 제목 컨테이너 -->
             <div class="title-box">
                 <div class="title">계급 기록</div>
-                <div class="subtitle">방금 전에 새로고침</div>
+                <div class="subtitle">기록한 점수를 볼 수 있어요!</div>
             </div>
+            <!-- 콘텐츠 컨테이너 -->
+            <div class="content">
+                <!-- 스크롤 컨테이너 -->
+                <div class="scoll-box">
+                    <?php 
+                        $DB = mysqli_connect("localhost", "root", "");
+                        mysqli_select_db($DB, "rank");
 
+                        $query = "select * from log order by number desc";
+                        $result = mysqli_query($DB, $query);
+                        $rank = 1;
+
+                        while($row = mysqli_fetch_array($result)){
+                            echo '<div class="rankitem hover-effect">';
+                            echo '<div class="ranknumber">-></div>';
+                            echo '<div class="rankname">'.$row['text'].'</div>';
+                            echo '<div class="rankcode">'.$row['number'].'번째에 기록 되었어요!</div>';
+                            echo '</div>';
+
+                            $rank++;
+                        }
+                        mysqli_close($DB);
+                    ?>
+                </div>
+            </div>
         </div>
     </body>
 </html>

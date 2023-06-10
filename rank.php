@@ -22,7 +22,7 @@
             <!-- 제목 컨테이너 -->
             <div class="title-box">
                 <div class="title">계급</div>
-                <div class="subtitle">방금 전에 새로고침</div>
+                <div class="subtitle">방금 전에 새로고침 했어요!</div>
             </div>
             <!-- 콘텐츠 컨테이너 -->
             <div class="content">

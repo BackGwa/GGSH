@@ -14,12 +14,20 @@
         $score = $_POST['rank'];
         $other = $_POST['other'];
 
-        $result = (int)$score + (int)$other;
+        $allscore = (int)$score + (int)$other;
 
         $DB = mysqli_connect("localhost", "root", "");
         mysqli_select_db($DB, "rank");
 
-        $query = "update board set score = (score + $result) where uid = $uid";
+        $query = "update board set score = (score + $allscore) where uid = $uid";
+        $result = mysqli_query($DB, $query);
+
+        $query = "select * from board where uid = $uid";
+        $result = mysqli_query($DB, $query);
+
+        $row = mysqli_fetch_array($result);
+
+        $query = "insert into log values(NULL, '".$row['name']." +".$allscore."점')";
         $result = mysqli_query($DB, $query);
         mysqli_close($DB);
 
