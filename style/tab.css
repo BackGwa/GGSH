@@ -1,44 +1,50 @@
 
 @keyframes LeftTab {
     0% {
+        opacity: 1.0;
         left: 0%;
     }
 
-    50% {
+    25% {
+        opacity: 0.0;
         left: 100%;
     }
 
-    51% {
+    26% {
         left: -100%;
     }
 
     100% {
+        opacity: 1.0;
         left: 0%;
     }
 }
 
 @keyframes RightTab {
     0% {
+        opacity: 1.0;
         right: 0%;
     }
 
-    50% {
+    25% {
+        opacity: 0.0;
         right: 100%;
     }
     
-    51% {
+    26% {
         right: -100%;
     }
 
     100% {
+        opacity: 1.0;
         right: 0%;
     }
 }
 
 .TabChangeL iframe {
-    animation: LeftTab 0.25s forwards;
+    animation: LeftTab 0.35s forwards ease-in-out;
 }
 
 .TabChangeR iframe {
-    animation: RightTab 0.25s forwards;
+    animation: RightTab 0.35s forwards ease-in-out;
 }

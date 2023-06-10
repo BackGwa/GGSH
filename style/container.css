@@ -1,0 +1,48 @@
+
+@media (prefers-color-scheme: light) {
+    .title {
+        color: var(--light-color);
+    }
+
+    .subtitle {
+        color: var(--light-unactive);
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .title {
+        color: var(--dark-color);
+    }
+
+    .subtitle {
+        color: var(--dark-unactive);
+    }
+}
+
+.container {
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+}
+
+.title-box {
+    width: 100%;
+    height: 72px;
+
+    margin-top: 172px;
+
+    padding-left: 28px;
+}
+
+.title {
+    font-size: 42px;
+    font-weight: 900;
+}
+
+.subtitle {
+    font-size: 16px;
+    font-weight: 300;
+
+    margin-top: 2px;
+}
