@@ -19,6 +19,11 @@
         fill: var(--light-unactive);
         color: var(--light-unactive);
     }
+
+    .dock-item:hover {
+        background: var(--light-hover);
+        border: 1px solid var(--light-border);
+    }
 }
 
 
@@ -42,6 +47,11 @@
     .unactive {
         fill: var(--dark-unactive);
         color: var(--dark-unactive);
+    }
+
+    .dock-item:hover {
+        background: var(--dark-hover);
+        border: 1px solid var(--dark-border);
     }
 }
 
@@ -72,19 +82,30 @@ footer {
 }
 
 .dock-item {
-    width: 100%;
-    height: 100%;
+    width: 90%;
+    height: 85%;
+
+    margin: 6px;
 
     display: grid;
+
+    border: 1px solid transparent;
+    border-radius: 25px;
+
+    background: none;
+    transition: 0.1s;
+}
+
+.dock-item:hover {
+    transform: scale(90%);
 }
 
 .item-icon {
     width: 28px;
     height: 28px;
-
-    border-radius: 25%;
-    margin: auto;
+    
     padding-top: 12px;
+    margin: auto;
 }
 
 .item-name {

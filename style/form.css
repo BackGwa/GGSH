@@ -1,0 +1,76 @@
+
+@media (prefers-color-scheme: light) {
+    form {
+        color: var(--light-color);
+    }
+
+    select {
+        color: var(--light-color);
+        background: var(--light-input);
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    form {
+        color: var(--dark-color);
+    }
+
+    select {
+        color: var(--dark-color);
+        background: var(--dark-input);
+    }
+}
+
+form {
+    margin: 0;
+}
+
+select {
+    width: 100%;
+    height: 36px;
+
+    margin-top: 4px;
+    margin-bottom: 12px;
+
+    border: none;
+    border-radius: 6px;
+
+    font-size: 16px;
+    font-weight: 500;
+
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    appearance:none;
+
+    text-align-last: center;
+}
+
+input:focus {
+    outline: none;
+} 
+
+.submit {
+    width: 100%;
+    height: 48px;
+
+    border: none;
+    border-radius: 6px;
+
+    background: var(--highlight-color);
+    color: #FFF;
+
+    font-size: 18px;
+    font-weight: 700;
+
+    margin-top: 6px;
+
+    transition: 0.2s;
+}
+
+.submit:hover {
+    background: var(--highlight-hover-color);
+}
+
+.HIDDEN {
+    display: none;
+}

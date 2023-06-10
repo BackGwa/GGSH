@@ -15,6 +15,7 @@
         <!-- CSS 적용 -->
         <link rel="stylesheet" href="./style/base.css">
         <link rel="stylesheet" href="./style/container.css">
+        <link rel="stylesheet" href="./style/rank.css">
 
         <!-- 폰트페이스 -->
         <link href="https://cdn.jsdelivr.net/gh/sunn-us/SUITE/fonts/variable/woff2/SUITE-Variable.css" rel="stylesheet"> 
@@ -29,7 +30,33 @@
                 <div class="title">계급</div>
                 <div class="subtitle">방금 전에 새로고침</div>
             </div>
+            <!-- 콘텐츠 컨테이너 -->
+            <div class="content">
+                <!-- 스크롤 컨테이너 -->
+                <div class="scoll-box">
+                    <?php 
+                        $DB = mysqli_connect("localhost", "root", "");
+                        mysqli_select_db($DB, "rank");
 
+                        $query = "select * from board order by score desc";
+                        $result = mysqli_query($DB, $query);
+                        $rank = 1;
+
+                        while($row = mysqli_fetch_array($result)){
+                            echo '<div class="rankitem hover-effect">';
+                            echo '<div class="ranknumber">'.$rank.'위'.'</div>';
+                            echo '<div class="rankname">'.$row['name'].'</div>';
+                            echo '<div class="rankcode">'.$row['uid'].'</div>';
+                            echo '<div class="rankscore">'.$row['score'].'점</div>';
+                            echo '</div>';
+
+                            $rank++;
+                        }
+                        mysqli_close($DB);
+                    ?>
+                </div>
+            </div>
         </div>
+        <script src="./script/hover.js"></script>
     </body>
 </html>

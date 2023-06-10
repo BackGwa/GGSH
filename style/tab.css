@@ -2,49 +2,59 @@
 @keyframes LeftTab {
     0% {
         opacity: 1.0;
-        left: 0%;
+        transform: scale(100%);
+        filter: blur(0px);
     }
 
     25% {
         opacity: 0.0;
-        left: 100%;
+        transform: scale(95%);
+        filter: blur(2px);
     }
 
-    26% {
-        left: -100%;
+    40% {
+        opacity: 0.0;
+        transform: scale(95%);
+        filter: blur(2px);
     }
 
     100% {
         opacity: 1.0;
-        left: 0%;
+        transform: scale(100%);
+        filter: blur(0px);
     }
 }
 
 @keyframes RightTab {
     0% {
         opacity: 1.0;
-        right: 0%;
+        transform: scale(100%);
+        filter: blur(0px);
     }
 
     25% {
         opacity: 0.0;
-        right: 100%;
+        transform: scale(95%);
+        filter: blur(2px);
     }
     
-    26% {
-        right: -100%;
+    40% {
+        opacity: 0.0;
+        transform: scale(95%);
+        filter: blur(2px);
     }
 
     100% {
         opacity: 1.0;
-        right: 0%;
+        transform: scale(100%);
+        filter: blur(0px);
     }
 }
 
 .TabChangeL iframe {
-    animation: LeftTab 0.35s forwards ease-in-out;
+    animation: LeftTab 0.25s forwards ease-in-out;
 }
 
 .TabChangeR iframe {
-    animation: RightTab 0.35s forwards ease-in-out;
+    animation: RightTab 0.25s forwards ease-in-out;
 }

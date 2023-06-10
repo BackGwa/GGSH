@@ -14,7 +14,7 @@ function TabChange(id) {
 
     setTimeout(function(){
         document.getElementById("tab").src = `./${tabid[id]}.php`;
-    }, 100)
+    }, 50)
 
     // 현재 탭을 제외한 모든 탭을 비활성화
     for (let i = 0; i < tabid.length; i++) {
@@ -50,7 +50,7 @@ function TabAnimation(id){
         document.getElementById("app").classList.add('TabChangeR');
     }
 
-    setTimeout(RemoveAnimation, 350);
+    setTimeout(RemoveAnimation, 250);
 }
 
 // 탭 변경 이벤트 등록 함수
