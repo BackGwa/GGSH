@@ -26,7 +26,7 @@
     ?>
     <script>
         alert("점수를 완벽하게 등록했어요!");
-        history.back();
+        location.href = "./register.php";
     </script>
 </body>
 
