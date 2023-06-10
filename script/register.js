@@ -148,7 +148,7 @@ function add_dalmu() {
 
 function add_dalmu_other() {
     document.getElementById("other_option").classList.remove('HIDDEN');
-    
+
     listed = [
         ["1~3계급 (-2점)", "-2"],
         ["4계급 (-1점)", "-1"],
@@ -156,4 +156,24 @@ function add_dalmu_other() {
         ["6계급 (+1점)", "1"],
         ["7~8계급 (+2점)", "2"]
     ]; add_other(listed);
+}
+
+function check_submit(){
+    form = document.register;
+
+    Select_name = form.select_uid.value;
+    Select_game = form.score.value;
+    Select_rank = form.rank.value;
+
+    if(!Select_name){
+        alert("자신을 선택하지 않았어요!");
+        return false;
+    } else if (!Select_game) {
+        alert("게임을 선택하지 않았어요!");
+        return false;
+    } else if (!Select_rank) {
+        alert("점수를 설정하지 않았어요!");
+        return false;
+    }
+    return true;
 }
