@@ -37,16 +37,11 @@ function RemoveAnimation(){
 
 // 탭 변경 애니메이션 재생 함수
 function TabAnimation(id){
-
     RemoveAnimation();
 
-    console.log(`이전 탭 : ${nowtab} | 바뀌는 탭 : ${id}`);
-
     if(nowtab > id) {
-        console.log('왼쪽으로 이동');
         document.getElementById("app").classList.add('TabChangeL');
     } else if (nowtab < id) {
-        console.log('오른쪽으로 이동');
         document.getElementById("app").classList.add('TabChangeR');
     }
 
