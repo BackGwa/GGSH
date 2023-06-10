@@ -78,7 +78,7 @@
                         </div>
 
                         <!-- 제출 -->
-                        <input class="submit" type="submit" value="등록하기">
+                        <input class="submit" type="submit" value="등록하기!">
                     </div>
                 </form>
             </div>
