@@ -13,8 +13,8 @@
     --highlight-hover-color: #4366e4;
 
     /* 그림자 색상 */
-    --dark-shadow: #f5f5f510;
-    --light-shadow: #1e1e1e10;
+    --dark-shadow: #f5f5f50D;
+    --light-shadow: #1e1e1e0D;
 
     /* 윤곽선 색상 */
     --dark-border: #f5f5f50F;
@@ -35,6 +35,13 @@ body {
     margin: 0;
     padding: 0;
     overflow: hidden;
+
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+
+    font-family: 'SUITE Variable', sans-serif;
 }
 
 /* 라이트 모드 시 웹 속성 */
@@ -64,8 +71,22 @@ footer {
     z-index: 10;
 }
 
-.app {
+/* 탭 구현 속서 */
+#app iframe {
     position: absolute;
     width: 100%;
     height: 100%;
+}
+
+/* 탭 테스트 */
+.tab-test {
+    color: #FFF;
+    font-weight: 900;
+    font-size: 48px;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
 }

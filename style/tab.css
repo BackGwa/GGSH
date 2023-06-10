@@ -1,0 +1,44 @@
+
+@keyframes LeftTab {
+    0% {
+        left: 0%;
+    }
+
+    50% {
+        left: 100%;
+    }
+
+    51% {
+        left: -100%;
+    }
+
+    100% {
+        left: 0%;
+    }
+}
+
+@keyframes RightTab {
+    0% {
+        right: 0%;
+    }
+
+    50% {
+        right: 100%;
+    }
+    
+    51% {
+        right: -100%;
+    }
+
+    100% {
+        right: 0%;
+    }
+}
+
+.TabChangeL iframe {
+    animation: LeftTab 0.25s forwards;
+}
+
+.TabChangeR iframe {
+    animation: RightTab 0.25s forwards;
+}

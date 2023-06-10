@@ -14,7 +14,6 @@
 
         <!-- CSS 적용 -->
         <link rel="stylesheet" href="./style/base.css">
-        <link rel="stylesheet" href="./style/tab.css">
 
         <!-- 폰트페이스 -->
         <link href="https://cdn.jsdelivr.net/gh/sunn-us/SUITE/fonts/variable/woff2/SUITE-Variable.css" rel="stylesheet"> 
@@ -22,12 +21,6 @@
     </head>
 
     <body>
-        <!-- 앱 UI -->
-        <div id="app">
-            <iframe src="./rank.php" frameborder="0" id="tab"></iframe>
-        </div>
-
-        <!-- 하단 독 추가 -->
-        <?php include './dock.html' ?>
+        <div class="tab-test">계급</div>
     </body>
 </html>
