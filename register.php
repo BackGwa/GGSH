@@ -82,6 +82,7 @@
                     </div>
                 </form>
             </div>
+        </div>
 
             <!-- 알림창 -->
             <div class="NONE-alert" id="alert_feedback">
@@ -100,8 +101,6 @@
                     </div>
                 </div>
             </div>
-
-        </div>
 
         <script src="./script/register.js"></script>
     </body>
