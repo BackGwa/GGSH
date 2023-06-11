@@ -29,8 +29,7 @@
                 <!-- 스크롤 컨테이너 -->
                 <div class="scoll-box">
                     <?php 
-                        $DB = mysqli_connect("localhost", "root", "");
-                        mysqli_select_db($DB, "rank");
+                        include './DB.php';
 
                         $query = "select * from board order by score desc";
                         $result = mysqli_query($DB, $query);

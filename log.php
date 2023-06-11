@@ -29,8 +29,7 @@
                 <!-- 스크롤 컨테이너 -->
                 <div class="scoll-box">
                     <?php 
-                        $DB = mysqli_connect("localhost", "root", "");
-                        mysqli_select_db($DB, "rank");
+                        include './DB.php';
 
                         $query = "select * from log order by number desc";
                         $result = mysqli_query($DB, $query);
@@ -50,5 +49,6 @@
                 </div>
             </div>
         </div>
+        <script src="./script/hover.js"></script>
     </body>
 </html>

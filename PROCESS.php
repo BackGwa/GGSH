@@ -16,8 +16,7 @@
 
         $allscore = (int)$score + (int)$other;
 
-        $DB = mysqli_connect("localhost", "root", "");
-        mysqli_select_db($DB, "rank");
+        include './DB.php';
 
         $query = "update board set score = (score + $allscore) where uid = $uid";
         $result = mysqli_query($DB, $query);
@@ -27,7 +26,7 @@
 
         $row = mysqli_fetch_array($result);
 
-        $query = "insert into log values(NULL, '".$row['name']." +".$allscore."점')";
+        $query = "insert into log values(NULL, '".$row['name']." ".$allscore."점')";
         $result = mysqli_query($DB, $query);
         mysqli_close($DB);
 
