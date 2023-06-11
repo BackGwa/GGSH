@@ -10,6 +10,7 @@
         <link rel="stylesheet" href="./style/base.css">
         <link rel="stylesheet" href="./style/container.css">
         <link rel="stylesheet" href="./style/form.css">
+        <link rel="stylesheet" href="./style/alert.css">
 
         <!-- 폰트페이스 -->
         <link href="https://cdn.jsdelivr.net/gh/sunn-us/SUITE/fonts/variable/woff2/SUITE-Variable.css" rel="stylesheet"> 
@@ -35,8 +36,7 @@
                         <select name="select_uid">
                             <option value="">> 자신을 선택해주세요. <</option>
                             <?php
-                                $DB = mysqli_connect("localhost", "root", "");
-                                mysqli_select_db($DB, "rank");
+                                include './DB.php';
 
                                 $query = "select * from board";
                                 $result = mysqli_query($DB, $query);
@@ -66,7 +66,7 @@
                         <!-- 점수 선택 -->
                         <div class="container-text">점수</div>
                         <select name="rank" id="ranks">
-                            <option value="">> 순위나 승패여부를 선택해주세요. <</option>
+                            <option value="">> 순위를 선택해주세요. <</option>
                         </select>
 
                         <!-- 기타 옵션 선택 -->
@@ -82,6 +82,25 @@
                     </div>
                 </form>
             </div>
+
+            <!-- 알림창 -->
+            <div class="NONE-alert" id="alert_feedback">
+                <div class="feedback-background play1"></div>
+                <div class="feedback play2">
+                    <div class="window play3">
+                        <div class="alert_title" id="at">
+                            
+                        </div>
+                        <div class="alert_subtitle" id="ast">
+                            
+                        </div>
+                        <div class="backbtn">
+                            <div class="btntext" onclick="close_alert();">알겠어요,</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
 
         <script src="./script/register.js"></script>
