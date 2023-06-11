@@ -158,6 +158,28 @@ function add_dalmu_other() {
     ]; add_other(listed);
 }
 
+const feedback = document.getElementById("alert_feedback");
+
+function alert_feedback(title, content){
+    feedback.querySelector(".feedback-background").classList.replace('play1-reverse', 'play1');
+    feedback.querySelector(".feedback").classList.replace('play2-reverse', 'play2');
+    feedback.querySelector(".window").classList.replace('play3-reverse', 'play3');
+
+    document.getElementById("at").innerHTML = title;
+    document.getElementById("ast").innerHTML = content;
+    feedback.classList.add("BLOCK");
+}
+
+function close_alert(){
+    feedback.querySelector(".feedback-background").classList.replace('play1', 'play1-reverse');
+    feedback.querySelector(".feedback").classList.replace('play2', 'play2-reverse');
+    feedback.querySelector(".window").classList.replace('play3', 'play3-reverse');
+    
+    setTimeout(function(){
+        feedback.classList.remove("BLOCK");
+    }, 250);
+}
+
 function check_submit(){
     form = document.register;
 
@@ -166,14 +188,15 @@ function check_submit(){
     Select_rank = form.rank.value;
 
     if(!Select_name){
-        alert("자신을 선택하지 않았어요!");
+        alert_feedback("자신을 선택하지<br>않았어요!", "점수를 등록하기 위해서는<br>사용자님의 정보가 필요해요!");
         return false;
     } else if (!Select_game) {
-        alert("게임을 선택하지 않았어요!");
+        alert_feedback("게임을 선택하지<br>않았어요!", "점수를 등록하기 위해서는<br>플레이한 보드게임을 선택해야해요!");
         return false;
     } else if (!Select_rank) {
-        alert("점수를 설정하지 않았어요!");
+        alert_feedback("점수를 설정하지<br>않았어요!", "점수를 등록하기 위해서는<br>몇 점을 얻었는지, 선택해야해요!");
         return false;
     }
+
     return true;
 }
