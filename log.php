@@ -12,7 +12,7 @@
         <link rel="stylesheet" href="./style/rank.css">
 
         <!-- 폰트페이스 -->
-        <link href="https://cdn.jsdelivr.net/gh/sunn-us/SUITE/fonts/variable/woff2/SUITE-Variable.css" rel="stylesheet"> 
+        <link href="./res/font/SUITE-Variable.css" rel="stylesheet"> 
 
     </head>
 

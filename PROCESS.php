@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1">
     <title>계급사회</title>
 
     <link rel="stylesheet" href="./style/base.css">
@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="./style/alert.css">
 
     <!-- 폰트페이스 -->
-    <link href="https://cdn.jsdelivr.net/gh/sunn-us/SUITE/fonts/variable/woff2/SUITE-Variable.css" rel="stylesheet"> 
+    <link href="./res/font/SUITE-Variable.css" rel="stylesheet"> 
 </head>
 
 <body>

@@ -3,7 +3,7 @@
 <html lang="ko">
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1">
         <title>계급사회</title>
 
         <!-- 웹 어플리케이션 등록 -->
@@ -17,11 +17,11 @@
         <link rel="stylesheet" href="./style/tab.css">
 
         <!-- 폰트페이스 -->
-        <link href="https://cdn.jsdelivr.net/gh/sunn-us/SUITE/fonts/variable/woff2/SUITE-Variable.css" rel="stylesheet"> 
+        <link href="./res/font/SUITE-Variable.css" rel="stylesheet"> 
 
     </head>
 
-    <body>
+    <body class="scroll-fix">
         <!-- 앱 UI -->
         <div id="app">
             <iframe src="./rank.php" frameborder="0" id="tab"></iframe>
