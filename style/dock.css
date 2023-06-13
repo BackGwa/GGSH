@@ -2,7 +2,7 @@
 @media (prefers-color-scheme: light) {
     .dock {
         background: var(--light-background);
-        filter: drop-shadow(0px 0px 18px var(--light-shadow));
+        /* filter: drop-shadow(0px 0px 18px var(--light-shadow)); */
 
         border: 1px solid var(--light-border);
     }
@@ -31,7 +31,7 @@
 @media (prefers-color-scheme: dark) {
     .dock {
         background: var(--dark-background);
-        filter: drop-shadow(0px 0px 18px var(--dark-shadow));
+        /* filter: drop-shadow(0px 0px 18px var(--dark-shadow)); */
 
         border: 1px solid var(--dark-border);
     }
