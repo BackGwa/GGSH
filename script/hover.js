@@ -14,3 +14,17 @@ hoverEffect.forEach(i => {
         i.classList.remove('active');
     });
 });
+
+var hoverEffect2 = document.querySelectorAll('.function-content');
+
+hoverEffect2.forEach(i => {
+    i.addEventListener('touchstart', function () {
+        i.classList.add('active');
+    });
+});
+
+hoverEffect2.forEach(i => {
+    i.addEventListener('touchend', function () {
+        i.classList.remove('active');
+    });
+});
