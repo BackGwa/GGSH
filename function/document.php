@@ -16,7 +16,7 @@
 
     </head>
 
-    <body>
+    <body class="document-fade">
         <!-- 앱 컨테이너 -->
         <div class="container">
             <!-- 제목 컨테이너 -->
