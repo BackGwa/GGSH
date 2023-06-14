@@ -31,19 +31,13 @@ function TabChange(id) {
 // 탭 변경 애니메이션 제거 함수
 function RemoveAnimation(){
     var appElement = document.getElementById("app");
-    appElement.classList.remove('TabChangeL');
-    appElement.classList.remove('TabChangeR');
+    appElement.classList.remove('TabChange');
 }
 
 // 탭 변경 애니메이션 재생 함수
 function TabAnimation(id){
     RemoveAnimation();
-
-    if(nowtab > id) {
-        document.getElementById("app").classList.add('TabChangeL');
-    } else if (nowtab < id) {
-        document.getElementById("app").classList.add('TabChangeR');
-    }
+    document.getElementById("app").classList.add('TabChange');
 
     setTimeout(RemoveAnimation, 250);
 }
@@ -54,5 +48,13 @@ function EventRegister() {
             document.getElementById(tabid[i]).addEventListener('click', function(){ if(i != nowtab) TabChange(i) })
     }
 }
+
+function DocumentAnimation(){
+    document.getElementById("app").classList.remove('TabChange');
+    document.getElementById("app").classList.add('TabChange');
+
+    setTimeout(RemoveAnimation, 250);
+}
+
 
 EventRegister();

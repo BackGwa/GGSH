@@ -160,7 +160,15 @@ function add_dalmu_other() {
 
 const feedback = document.getElementById("alert_feedback");
 
-function alert_feedback(title, content){
+navigator.vibrate = navigator.vibrate || navigator.webkitVibrate || navigator.mozVibrate || navigator.msVibrate;
+
+function vibrate() {
+    if (navigator.vibrate) {
+        navigator.vibrate(500);
+    }
+}
+
+function alert_feedback(title, content) {
     feedback.querySelector(".feedback-background").classList.replace('play1-reverse', 'play1');
     feedback.querySelector(".feedback").classList.replace('play2-reverse', 'play2');
     feedback.querySelector(".window").classList.replace('play3-reverse', 'play3');
@@ -168,26 +176,27 @@ function alert_feedback(title, content){
     document.getElementById("at").innerHTML = title;
     document.getElementById("ast").innerHTML = content;
     feedback.classList.add("BLOCK");
+    vibrate();
 }
 
-function close_alert(){
+function close_alert() {
     feedback.querySelector(".feedback-background").classList.replace('play1', 'play1-reverse');
     feedback.querySelector(".feedback").classList.replace('play2', 'play2-reverse');
     feedback.querySelector(".window").classList.replace('play3', 'play3-reverse');
-    
-    setTimeout(function(){
+
+    setTimeout(function () {
         feedback.classList.remove("BLOCK");
     }, 250);
 }
 
-function check_submit(){
+function check_submit() {
     form = document.register;
 
     Select_name = form.select_uid.value;
     Select_game = form.score.value;
     Select_rank = form.rank.value;
 
-    if(!Select_name){
+    if (!Select_name) {
         alert_feedback("자신을 선택하지<br>않았어요!", "점수를 등록하기 위해서는<br>사용자님의 정보가 필요해요!");
         return false;
     } else if (!Select_game) {

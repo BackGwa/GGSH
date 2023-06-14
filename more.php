@@ -18,7 +18,7 @@
 
     <body>
         <!-- 앱 컨테이너 -->
-        <div class="container">
+        <div class="container" id="container">
             <!-- 제목 컨테이너 -->
             <div class="title-box">
                 <div class="title">더보기</div>
@@ -37,6 +37,11 @@
                             <div class="item-text">급식 정보</div>
                         </div>
 
+                        <div class="function-content" onclick="call_function('assignment/start');">
+                            <img class="item-icon" src="./res/image/video-game.png">
+                            <div class="item-text">보드게임 배정</div>
+                        </div>
+
                         <div class="function-content" onclick="wait();">
                             <img class="item-icon" src="./res/image/safety-pin.png">
                             <div class="item-text">무작위 선택</div>
@@ -45,6 +50,15 @@
                         <div class="function-content" onclick="wait();">
                             <img class="item-icon" src="./res/image/game-die.png">
                             <div class="item-text">주사위 굴리기</div>
+                        </div>
+
+                        <div class="content-spt">
+                            <div class="spt-title">재미</div>
+                        </div>
+
+                        <div class="function-content" onclick="wait();">
+                            <img class="item-icon" src="./res/image/test-tube.png">
+                            <div class="item-text">나의 MBTI는 무엇일까?</div>
                         </div>
 
                         <div class="content-spt">
@@ -64,6 +78,20 @@
                         <div class="function-content" onclick="function_document(2);">
                             <img class="item-icon" src="./res/image/bubbles.png">
                             <div class="item-text">데이터는 어떻게 관리되나요?</div>
+                        </div>
+
+                        <div class="function-content" onclick="newtab(`https://toss.me/backgwa`);">
+                            <img class="item-icon" src="./res/image/money-with-wings.png">
+                            <div class="item-text">프로젝트 후원하기</div>
+                        </div>
+
+                        <div class="version">
+                            <div class="info">
+                                <div class="version-title">계급사회</div>
+                                <div class="version-split">-</div>
+                                <div class="version-info">버전 정보 : RC 1.0</div>
+                            </div>
+                            <div class="maker">만든 이 : 강찬영</div>
                         </div>
                     </div>
                 </div>
