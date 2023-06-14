@@ -21,13 +21,14 @@
 
     </head>
 
-    <body class="scroll-fix">
+    <body class="scroll-fix nonebox">
+        <div class="background"></div>
+        <div class="backgroundR"></div>
         <!-- 앱 UI -->
         <div id="app">
             <iframe src="./rank.php" frameborder="0" id="tab"></iframe>
         </div>
 
-        <!-- 하단 독 추가 -->
         <?php include './dock.html' ?>
     </body>
 </html>
