@@ -16,6 +16,10 @@
     .item-text {
         color: var(--light-color);
     }
+
+    .version {
+        color: var(--light-color);
+    }
 }
 
 @media (prefers-color-scheme: dark) {
@@ -33,6 +37,10 @@
     }
 
     .item-text {
+        color: var(--dark-color);
+    }
+
+    .version {
         color: var(--dark-color);
     }
 }
@@ -94,4 +102,61 @@
 
 .function-content:hover {
     transform: scale(98%);
+}
+
+.aniz {
+    animation: content 0.125s ease-in-out forwards;
+}
+
+.version {
+    margin-top: 24px;
+    margin-bottom: 24px;
+    display: grid;
+    text-align: center;
+}
+
+.info {
+    display: flex;
+    justify-content: center;
+}
+
+@keyframes content {
+    0% {
+        transform: translateX(0%);
+        opacity: 1.0;
+    }
+
+    90% {
+        opacity: 0.0;
+    }
+
+    100% {
+        transform: translateX(-100%);
+        opacity: 0.0;
+    }
+}
+
+.version-title {
+    font-size: 14px;
+    font-weight: 700;
+    opacity: 0.6;
+}
+
+.version-split {
+    opacity: 0.4;
+    font-weight: 400;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+.version-info {
+    font-size: 14px;
+    font-weight: 400;
+    opacity: 0.4;
+}
+
+.maker {
+    font-size: 12px;
+    font-weight: 400;
+    opacity: 0.4;
 }

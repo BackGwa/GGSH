@@ -38,6 +38,13 @@
     margin-right: 24px;
 }
 
+.function-container {
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+}
+
 /* 제목 컨테이너 */
 .title-box {
     width: 100%;
@@ -109,6 +116,20 @@
 .document-scoll-box {
     width: 100%;
     height: calc(100% - 18rem);
+
+    border-radius: 12px;
+
+    overflow-x: hidden;
+    overflow-y: scroll;
+
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+/* 스크롤 컨테이너 */
+.choice-scoll-box {
+    width: 100%;
+    height: calc(100% - 24rem);
 
     border-radius: 12px;
 

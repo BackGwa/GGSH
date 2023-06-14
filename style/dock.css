@@ -73,6 +73,16 @@ footer {
     border-top-right-radius: 20px;
 }
 
+
+@media screen and (min-width: 810px) {
+    footer {
+        max-width: 810px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+
 .dock-list {
     width: 100%;
     height: 100%;
