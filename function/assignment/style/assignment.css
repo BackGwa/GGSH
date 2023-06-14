@@ -1,0 +1,272 @@
+
+@media (prefers-color-scheme: light) {
+    .anime-title  {
+        color: var(--light-color);
+    }
+
+    .item {
+        background: var(--light-hover);
+        border: 1px solid var(--light-border);
+    }
+
+    .gameitem {
+        background: var(--light-hover);
+        border: 1px solid var(--light-border);
+    }
+
+    .remove, .gametitle, .gamehuman, .name, .uid  {
+        color: var(--light-color);
+    }
+
+    .button1 {
+        background: var(--light-unfocus);
+    }
+
+    .button1:hover {
+        background: var(--light-unfocus-hover);
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .anime-title  {
+        color: var(--dark-color);
+    }
+
+    .item {
+        background: var(--dark-hover);
+        border: 1px solid var(--dark-border);
+    }
+
+    .gameitem {
+        background: var(--dark-hover);
+        border: 1px solid var(--dark-border);
+    }
+
+    .remove, .gametitle, .gamehuman, .name, .uid {
+        color: var(--dark-color);
+    }
+
+    .button1 {
+        background: var(--dark-unfocus);
+    }
+
+    .button1:hover {
+        background: var(--dark-unfocus-hover);
+    }
+}
+
+.anime-title {
+    position: absolute;
+    
+    font-size: clamp(2rem, 10vw, 5rem);;
+    font-weight: 900;
+    text-align: center;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    animation: title 2s forwards ease-in-out;
+}
+
+br {
+    margin-top: 1px;
+}
+
+@keyframes title {
+    0% {
+        transform: translate(-50%, 0%);
+        opacity: 0.0;
+    }
+
+    25% {
+        opacity: 1.0;
+    }
+
+    30% {
+        transform: translate(-50%, -70%);
+        opacity: 1.0;
+    }
+
+    80% {
+        transform: translate(-50%, -120%);
+    }
+
+    100% {
+        transform: translate(-50%, -120%);
+        opacity: 0.0;
+    }
+}
+
+.item {
+    position: relative;
+
+    width: 100%;
+    height: 60px;
+
+    padding: 3px;
+
+    margin-top: 8px;
+    margin-bottom: 8px;
+    border-radius: 12px;
+
+    display: flex;
+}
+
+.itembox {
+    position: relative;
+    display: flex;
+}
+
+.remove {
+    position: absolute;
+
+    width: 80px;
+    height: 30px;
+
+    padding: 3px;
+
+    margin-top: 24px;
+    margin-bottom: 8px;
+
+    right: 18px;
+
+    background: var(--error-color);
+
+
+    border-radius: 48px;
+
+    transition: 0.2s ease-in-out;
+
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.icon {
+    text-align: center;
+    margin-top: 2px;
+
+    transition: 0.2s;
+}
+
+.remove:hover {
+    background: var(--error-hover-color);
+}
+
+.name {
+    font-size: 20px;
+    font-weight: 600;
+
+    margin-top: 8px;
+    margin-left: 12px;
+
+    overflow: hidden;
+    text-align: left;
+}
+
+.uid {
+    font-size: 14px;
+    font-weight: 600;
+
+    margin-top: 32px;
+    margin-left: 12px;
+
+    overflow: hidden;
+
+    text-align: right;
+
+    opacity: 0.5;
+}
+
+.name,
+.uid {
+    position: absolute;
+}
+
+.rmani {
+    animation: rmani 0.25s forwards ease-in-out;
+}
+
+@keyframes rmani {
+    0% {
+        transform: translateX(0%);
+        opacity: 1.0;
+    }
+
+    100% {
+        transform: translateX(100%);
+        opacity: 0.0;
+    }
+}
+
+.splitbutton {
+    margin-bottom: 24px;
+    width: 100%;
+    height: 60px;
+
+    display: flex;
+    justify-content: center;
+
+    text-align: center;
+    color: #FFF;
+    font-size: 22px;
+}
+
+.button1 {
+    width: calc(50% - 8px);
+
+    border-radius: 16px;
+    margin-left: 4px;
+
+    margin-right: 4px;
+
+    font-weight: 600;
+
+    transition: 0.2s;
+
+    transform: scale(100%);
+}
+
+.button2 {
+    background: var(--highlight-color);
+    width: calc(50% - 8px);
+
+    border-radius: 16px;
+    font-size: 22px;
+    margin-right: 4px;
+
+    margin-left: 4px;
+
+    font-weight: 800;
+
+    transition: 0.2s;
+
+    transform: scale(100%);
+}
+
+.button1:hover {
+    transform: scale(98%);
+}
+
+.button2:hover {
+    background: var(--highlight-hover-color);
+    transform: scale(98%);
+}
+
+.btninner {
+    margin-top: 16px;
+}
+
+@keyframes fadein {
+    0% {
+        opacity: 0.0;
+    }
+
+    100% {
+        opacity: 1.0;
+    }
+}
+
+.container-fade {
+    animation: fadein 0.5s forwards;
+}
