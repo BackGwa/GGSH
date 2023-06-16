@@ -89,7 +89,7 @@
                             <div class="info">
                                 <div class="version-title">계급사회</div>
                                 <div class="version-split">-</div>
-                                <div class="version-info">버전 정보 : RC 1.0</div>
+                                <div class="version-info">버전 정보 : RC 1.10</div>
                             </div>
                             <div class="maker">만든 이 : 강찬영</div>
                         </div>
