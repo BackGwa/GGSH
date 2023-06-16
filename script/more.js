@@ -7,7 +7,7 @@ function function_document(doctype){
     document.getElementById("container").classList.remove('aniz');
     document.getElementById("container").classList.add('aniz');
     setTimeout(function() {
-        location.href = `./function/document.php?doctype=${doctype}`;
+        location.href = `./function/document/document.php?doctype=${doctype}`;
     }, 125);
 }
 
