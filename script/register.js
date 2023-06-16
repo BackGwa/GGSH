@@ -160,12 +160,9 @@ function add_dalmu_other() {
 
 const feedback = document.getElementById("alert_feedback");
 
-navigator.vibrate = navigator.vibrate || navigator.webkitVibrate || navigator.mozVibrate || navigator.msVibrate;
 
 function vibrate() {
-    if (navigator.vibrate) {
-        navigator.vibrate(500);
-    }
+    window.navigator.vibrate(75);
 }
 
 function alert_feedback(title, content) {
@@ -176,6 +173,7 @@ function alert_feedback(title, content) {
     document.getElementById("at").innerHTML = title;
     document.getElementById("ast").innerHTML = content;
     feedback.classList.add("BLOCK");
+
     vibrate();
 }
 
