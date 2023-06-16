@@ -31,7 +31,7 @@
             <div class="content">
                 <div class="splitbutton">
                     <div class="button1" onclick="reset_game();">
-                        <div class="btninner" id="rst-text">초기화</div>
+                        <div class="btninner rsttxt" id="rst-text">초기화</div>
                     </div>
                     <div class="button2" onclick="open_popup();">
                         <div class="btninner">게임 선택</div>
@@ -95,11 +95,11 @@
                 <div class="popup-subtitle">적절한 인원 수를 선택해주세요.</div>
 
                 <div class="popup-splitbutton">
-                    <div class="buttonx" onclick="confirm_selected(0);">
+                    <div class="buttonx rsttxt" onclick="confirm_selected(0);">
                         <div class="btninner" id="playera">3명</div>
                     </div>
                     <div class="button-margin"></div>
-                    <div class="buttonx" onclick="confirm_selected(1);">
+                    <div class="buttonx rsttxt" onclick="confirm_selected(1);">
                         <div class="btninner" id="playerb">4명</div>
                     </div>
                 </div>

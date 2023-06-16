@@ -25,6 +25,14 @@
     .button1:hover {
         background: var(--light-unfocus-hover);
     }
+
+    .icon {
+        color: var(--dark-color);
+    }
+
+    .rsttxt {
+        color: var(--highlight-color);
+    }
 }
 
 @media (prefers-color-scheme: dark) {
@@ -52,6 +60,10 @@
 
     .button1:hover {
         background: var(--dark-unfocus-hover);
+    }
+
+    .icon {
+        color: var(--dark-color);
     }
 }
 

@@ -32,7 +32,7 @@
                 <!-- 스크롤 컨테이너 -->
                 <div class="splitbutton">
                     <div class="button1" onclick="item_reset();">
-                        <div class="btninner" id="rst-text">초기화</div>
+                        <div class="btninner rsttxt" id="rst-text">초기화</div>
                     </div>
                     <div class="button2" onclick="sendinfo();">
                         <div class="btninner">시작하기</div>
