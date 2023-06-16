@@ -63,6 +63,8 @@ footer {
     bottom: 0;
     
     z-index: 10;
+
+    max-width: 840px;
 }
 
 .dock {
@@ -74,9 +76,9 @@ footer {
 }
 
 
-@media screen and (min-width: 810px) {
+@media screen and (min-width: 840px) {
     footer {
-        max-width: 810px;
+        max-width: 840px;
         left: 50%;
         transform: translateX(-50%);
     }
