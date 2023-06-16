@@ -7,12 +7,12 @@
         <title>계급사회</title>
         
         <!-- CSS 적용 -->
-        <link rel="stylesheet" href="../style/base.css?after">
-        <link rel="stylesheet" href="../style/container.css">
-        <link rel="stylesheet" href="../style/document.css">
+        <link rel="stylesheet" href="../../style/base.css?after">
+        <link rel="stylesheet" href="../../style/container.css">
+        <link rel="stylesheet" href="./style/document.css">
 
         <!-- 폰트페이스 -->
-        <link href="../res/font/SUITE-Variable.css" rel="stylesheet"> 
+        <link href="../../res/font/SUITE-Variable.css" rel="stylesheet"> 
 
     </head>
 
